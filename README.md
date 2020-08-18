@@ -2,6 +2,11 @@
 
 A website made using HTML, CSS, Bootstrap and Flask to recommend anime. We used KNN and K-Means algorithms to give three kinds of recommendations - based on genre, based on user ratings and finally the top recommendations.
 
+## Contributors
+
+Dhruv Garg
+Aditya Upadhyay
+
 ## Installation and Setup
 
 * Fork the repo and clone it.

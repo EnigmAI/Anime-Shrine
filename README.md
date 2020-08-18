@@ -4,8 +4,8 @@ A website made using HTML, CSS, Bootstrap and Flask to recommend anime. We used 
 
 ## Contributors
 
-Dhruv Garg
-Aditya Upadhyay
+- Dhruv Garg
+- Aditya Upadhyay
 
 ## Installation and Setup
 

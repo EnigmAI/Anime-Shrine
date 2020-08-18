@@ -6,7 +6,7 @@ A website made using HTML, CSS, Bootstrap and Flask to recommend anime. We used 
 
 * Fork the repo and clone it.
 ```
-https://github.com/
+https://github.com/EnigmAI/Anime-Shrine.git
 ```
 * Install the necessary packages required to run the code
 * Run the following command

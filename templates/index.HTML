@@ -1,0 +1,79 @@
+<HTML>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/a7e5305de0.js" crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+
+    <title>Anime Shrine</title>
+</head>
+
+<body
+    style="background-image: url({{url_for('static', filename = 'anime.jpg')}}); background-size:cover; background-position:center; background-repeat:no-repeat; background-position:center center; background-repeat:no-repeat; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; background-attachment: fixed;">
+    <div class="row h-100">
+        <div class="col-sm-12 my-auto">
+            <form class="container p-3 my-3 bg-transparent text-dark col-sm-5 rounded h-50" action="/recommendBN"
+                method="post">
+                <div style="padding-top: 30px;"></div>
+                <div class="form-group card-block w-30 mx-auto">
+                    <label for="name"><strong>Name</strong></label>
+                    <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp"
+                        placeholder="Enter Name of Anime">
+                </div>
+                <div style="padding-top: 50px;"></div>
+                <div class="card card-block w-25 mx-auto bg-dark">
+                    <button type="submit" class="btn btn-primary">Recommend</button>
+                </div>
+                 <div style="padding-top: 10px;"></div>
+                <div class="text-dark">
+                    <table border=1 style="color: white;" align="center" class="bg-dark">
+                        {% for value in result2 %}
+                        <tr>
+                            <td> {{ value }} </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </form>
+            <form class="container p-3 my-3 bg-transparent text-dark col-sm-5 rounded h-50" action="/" method="post">
+                <div style="padding-top: 10px;"></div>
+                <div class="form-group card-block w-30 mx-auto">
+                    <label for="partname"><strong>Search Anime Name</strong></label>
+                    <input type="text" class="form-control" id="part" name="part" aria-describedby="emailHelp"
+                        placeholder="Enter Partial Name of any Anime to see if it is in our list">
+                </div>
+                <div style="padding-top: 50px;"></div>
+                <div class="card card-block w-25 mx-auto bg-dark">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+                <div style="padding-top: 10px;"></div>
+                <div class="text-dark">
+                    <table border=1 style="color: white;" align="center" class="bg-dark">
+                        {% for value in result %}
+                        <tr>
+                            <td> {{ value }} </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>

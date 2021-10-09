@@ -16,7 +16,7 @@ https://github.com/EnigmAI/Anime-Shrine.git
 * Install the necessary packages required to run the code
 * Run the following command
 ```
-python main.py
+python app.py
 ```
 * Next go to your web browser and open the url below
 ```
